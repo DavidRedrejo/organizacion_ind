@@ -18,14 +18,14 @@ void LoteEconomico::mostrar(){
     cout<<"La demanda anual es de: "<<Demandanual<<" unidades"<<endl;
     cout<<"El coste de emision es de: "<<cemision<<" euros"<<endl;
     cout<<"El coste de posesion es de: "<<cposesion<<" euros"<<endl;
-    }
+}
 
 EOQ::EOQ(string _Producto,float _Demandanual,float _cemision,float _cposesion) : LoteEconomico(_Producto,_Demandanual,_cemision,_cposesion){
 
 }
 void EOQ::mostrar(){
     LoteEconomico::mostrar();
-   }
+}
 void EOQ::calculoEOQ(){
     tamloteEOQ=sqrt((2*Demandanual*cemision)/cposesion);
     cout<<"El tamano del lote es de: "<<tamloteEOQ<<" unidades"<<endl;

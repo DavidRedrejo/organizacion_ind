@@ -9,8 +9,8 @@ using namespace std;
 class LoteEconomico{
     protected:
         string Producto;
-        float Demandanual,cemision;
-        float cposesion;
+        float Demandanual;
+        float cemision, cposesion;
 
     public:
         LoteEconomico(string,float,float,float);
