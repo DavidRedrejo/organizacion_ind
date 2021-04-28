@@ -43,8 +43,9 @@ void MainWindow::on_bt_calcular_tam_lote_clicked()
     }
     if(metodo=="EOQ"){
         EOQ lote(producto, demanda_anual, cEmision, cPosesion);
-        lote.calculoEOQ();
+        tamano_lote=lote.calculoEOQ();
         lote.mostrar();
+        ui->line_tam_lote->setText(QString::number(tamano_lote));
         qDebug("calcula eoq");
     }
     else if(metodo=="POQ"){qDebug("pruebaPOQ");}

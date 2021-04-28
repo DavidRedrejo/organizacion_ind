@@ -25,10 +25,11 @@ EOQ::EOQ(string _Producto,float _Demandanual,float _cemision,float _cposesion) :
 }
 void EOQ::mostrar(){
     LoteEconomico::mostrar();
-}
-void EOQ::calculoEOQ(){
-    tamloteEOQ=sqrt((2*Demandanual*cemision)/cposesion);
     cout<<"El tamano del lote es de: "<<tamloteEOQ<<" unidades"<<endl;
+}
+int EOQ::calculoEOQ(){
+    tamloteEOQ=sqrt((2*Demandanual*cemision)/cposesion);
+    return tamloteEOQ;
 }
 POQ::POQ(string _Producto,float _Demandanual,float _cemision,float _cposesion, float _demandadiaria,float _producciondiaria) : LoteEconomico(_Producto,_Demandanual,_cemision,_cposesion){
     producciondiaria=_producciondiaria;
@@ -39,10 +40,11 @@ void POQ::mostrar(){
     LoteEconomico::mostrar();
     cout<<"La demanda diaria es de: "<<demandadiaria<<" unidades"<<endl;
     cout<<"La produccion diaria es de: "<<producciondiaria<<" unidades"<<endl;
-}
-void POQ::calculoPOQ(){
-    tamlotePOQ=sqrt((2*Demandanual*cemision)/(cposesion*(1-(demandadiaria/producciondiaria))));
     cout<<"El tamano del lote es de: "<<tamlotePOQ<<" unidades"<<endl;
+}
+int POQ::calculoPOQ(){
+    tamlotePOQ=sqrt((2*Demandanual*cemision)/(cposesion*(1-(demandadiaria/producciondiaria))));
+    return tamlotePOQ;
 }
 EOQruptura::EOQruptura(string _Producto,float _Demandanual,float _cemision,float _cposesion,float _cruptura) : EOQ(_Producto,_Demandanual,_cemision,_cposesion){
     cruptura=_cruptura;
@@ -50,12 +52,13 @@ EOQruptura::EOQruptura(string _Producto,float _Demandanual,float _cemision,float
 void EOQruptura::mostrar(){
     LoteEconomico::mostrar();
     cout<<"El coste de ruptura es de: "<<cruptura<<" euros"<<endl;
+    cout<<"El tamano del lote es de: "<<tamloteEOQr<<" unidades"<<endl;
 }
 
-void EOQruptura::calculoEOQruptura(){
+int EOQruptura::calculoEOQruptura(){
     calculoEOQ();
     tamloteEOQr=tamloteEOQ*sqrt((cposesion+cruptura)/cruptura);
-    cout<<"El tamano del lote es de: "<<tamloteEOQr<<" unidades"<<endl;
+    return tamloteEOQr;
 }
 
 POQruptura::POQruptura(string _Producto,float _Demandanual,float _cemision,float _cposesion, float _demandadiaria,float _producciondiaria, float _cruptura):POQ(_Producto,_Demandanual,_cemision,_cposesion,_demandadiaria,_producciondiaria),EOQruptura(_Producto,_Demandanual,_cemision,_cposesion,_cruptura){
@@ -65,11 +68,12 @@ POQruptura::POQruptura(string _Producto,float _Demandanual,float _cemision,float
 void POQruptura::mostrar(){
     POQ::mostrar();
     cout<<"El coste de ruptura es de: "<<cruptura<<" euros"<<endl;
+    cout<<"El tamano del lote es de: "<<tamlotePOQr<<" unidades"<<endl;
 }
 
-void POQruptura::calculoPOQruptura(){
+int POQruptura::calculoPOQruptura(){
     calculoPOQ();
     float cpose=POQ::cposesion;
     tamlotePOQr=sqrt((cpose+cruptura)/cruptura)*tamlotePOQ;
-    cout<<"El tamano del lote es de: "<<tamlotePOQr<<" unidades"<<endl;
+    return tamlotePOQr;
 }

@@ -23,7 +23,7 @@ class EOQ:public LoteEconomico{
       public:
         EOQ(string,float,float,float);
         void mostrar();
-        void calculoEOQ();
+        int calculoEOQ();
 };
 
 class POQ:public LoteEconomico{
@@ -33,7 +33,7 @@ class POQ:public LoteEconomico{
     public:
         POQ(string,float,float,float,float,float);
         void mostrar();
-        void calculoPOQ();
+        int calculoPOQ();
 };
 
 class EOQruptura:public EOQ{
@@ -43,7 +43,7 @@ class EOQruptura:public EOQ{
     public:
         EOQruptura(string,float, float, float, float);
         void mostrar();
-        void calculoEOQruptura();
+        int calculoEOQruptura();
 };
 
 class POQruptura: POQ, EOQruptura{
@@ -52,7 +52,7 @@ class POQruptura: POQ, EOQruptura{
     public:
         POQruptura(string,float, float, float, float,float,float);
         void mostrar();
-        void calculoPOQruptura();
+        int calculoPOQruptura();
 };
 
 #endif // CLASES_LOTES_H
