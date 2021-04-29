@@ -25,7 +25,7 @@ private:
     int demanda_nueva; // esta demanda es la división en los 6 periodos
     int tamano;
     //_vector v1;
-    _vector calcular_primerV(_vector);
+    _vector calcular_NN_PPL(_vector);
     _vector calcular(_vector, _vector);
 };
 
