@@ -73,6 +73,34 @@ void Dialog_plan::on_bt_calcular_clicked()
     ui->nb_8->setText(QString::number(v2[1]));
     ui->nb_20->setText(QString::number(v2[3]));
     ui->nb_26->setText(QString::number(v2[4]));
+    _vector v3(5,0);
+    v3[0] = ui->nb_3->text().toInt();
+    v3[2] = ui->nb_15->text().toInt();
+    v3 = calcular(v3, v2);
+    ui->nb_9->setText(QString::number(v3[1]));
+    ui->nb_21->setText(QString::number(v3[3]));
+    ui->nb_27->setText(QString::number(v3[4]));
+    _vector v4(5,0);
+    v4[0] = ui->nb_4->text().toInt();
+    v4[2] = ui->nb_16->text().toInt();
+    v4 = calcular(v4, v3);
+    ui->nb_10->setText(QString::number(v4[1]));
+    ui->nb_22->setText(QString::number(v4[3]));
+    ui->nb_28->setText(QString::number(v4[4]));
+    _vector v5(5,0);
+    v5[0] = ui->nb_5->text().toInt();
+    v5[2] = ui->nb_17->text().toInt();
+    v5 = calcular(v5, v4);
+    ui->nb_11->setText(QString::number(v5[1]));
+    ui->nb_23->setText(QString::number(v5[3]));
+    ui->nb_29->setText(QString::number(v5[4]));
+    _vector v6(5,0);
+    v6[0] = ui->nb_6->text().toInt();
+    v6[2] = ui->nb_18->text().toInt();
+    v6 = calcular(v6, v5);
+    ui->nb_12->setText(QString::number(v6[1]));
+    ui->nb_24->setText(QString::number(v6[3]));
+    ui->nb_30->setText(QString::number(v6[4]));
 
 
 }
