@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <vector>
+#include "factura.h"
 
 typedef std::vector<int> _vector;
 namespace Ui {
@@ -24,11 +25,12 @@ private:
     Ui::Dialog_plan *ui;
     int demanda_nueva; // esta demanda es la división en los 6 periodos
     int tamano;
-    float costetotal,cposesion,cemision;
-    //_vector v1;
-    _vector calcular_primerV(_vector);
+    float cposesion,cemision;
+    _vector calcular_NN_PPL(_vector);
     _vector calcular(_vector, _vector);
     float calcularcoste(_vector,_vector,_vector,_vector,_vector,_vector);
+public:
+    float costetotal = 0;
 };
 
 #endif // DIALOG_PLAN_H

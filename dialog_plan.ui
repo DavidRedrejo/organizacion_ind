@@ -893,7 +893,7 @@ Programadas</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>150</y>
+     <y>60</y>
      <width>111</width>
      <height>51</height>
     </rect>
@@ -916,7 +916,7 @@ calculado antes:</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>210</y>
+     <y>120</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -973,6 +973,51 @@ Planificación</string>
    </property>
    <property name="text">
     <string>&lt;---</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_coste_total">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>240</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(204, 206, 226);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>200</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Coste Total:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

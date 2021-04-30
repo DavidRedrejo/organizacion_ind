@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>605</width>
-    <height>403</height>
+    <width>614</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>40</y>
+      <y>50</y>
       <width>341</width>
       <height>291</height>
      </rect>
@@ -385,7 +385,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>10</y>
+      <y>20</y>
       <width>231</width>
       <height>16</height>
      </rect>
@@ -403,9 +403,9 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>0</y>
-      <width>20</width>
-      <height>381</height>
+      <y>-10</y>
+      <width>21</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="orientation">
@@ -415,9 +415,9 @@
    <widget class="QPushButton" name="bt_calcular_tam_lote">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>50</y>
-      <width>91</width>
+      <x>400</x>
+      <y>30</y>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -429,18 +429,24 @@ Tamaño Lote</string>
    <widget class="QLineEdit" name="line_tam_lote">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>100</y>
+      <x>400</x>
+      <y>80</y>
       <width>113</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>140</y>
+      <y>110</y>
       <width>251</width>
       <height>21</height>
      </rect>
@@ -452,15 +458,132 @@ Tamaño Lote</string>
    <widget class="QPushButton" name="bt_planificacion">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>200</y>
+      <x>400</x>
+      <y>140</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Planificación y Coste Total</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>220</y>
+      <width>251</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_nombre">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>260</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Nombre...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_apell">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>290</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Apellido...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_DNI">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>320</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>DNI...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_mostrar_fact">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>280</y>
       <width>91</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Mostrar
-Planificación</string>
+Factura</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>80</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>unidades</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_coste_total">
+    <property name="geometry">
+     <rect>
+      <x>402</x>
+      <y>190</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>190</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>€</string>
     </property>
    </widget>
   </widget>
@@ -469,12 +592,11 @@ Planificación</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>605</width>
+     <width>614</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

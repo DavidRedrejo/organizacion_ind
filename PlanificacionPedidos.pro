@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     clases_lotes.cpp \
+    dialog_factura.cpp \
     dialog_plan.cpp \
     factura.cpp \
     main.cpp \
@@ -17,11 +18,13 @@ SOURCES += \
 
 HEADERS += \
     clases_lotes.h \
+    dialog_factura.h \
     dialog_plan.h \
     factura.h \
     mainwindow.h
 
 FORMS += \
+    dialog_factura.ui \
     dialog_plan.ui \
     mainwindow.ui
 
