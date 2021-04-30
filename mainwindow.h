@@ -29,7 +29,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QString metodo = "EOQ"; //EOQ por defecto porque es la pestaña inicial
+    QString metodo = "EOQ"; //EOQ porque es la pestaña inicial
     int tamano_lote = -1; //se inicia en -1 para controlar el flujo del programa
     std::string producto;
     float demanda_anual, cEmision, cPosesion;

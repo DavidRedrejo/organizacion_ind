@@ -42,13 +42,14 @@ class Factura{
    public:
        Factura(Cliente);
 
+
 };
 
 class Sucursal{
    private:
        int dirrecion;
+       Factura pedido;
    public:
-       Sucursal(int);
        void setdirrecion(int);
        int getdirrecion();
 };

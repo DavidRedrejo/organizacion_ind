@@ -11,12 +11,14 @@ CONFIG += c++11
 SOURCES += \
     clases_lotes.cpp \
     dialog_plan.cpp \
+    factura.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     clases_lotes.h \
     dialog_plan.h \
+    factura.h \
     mainwindow.h
 
 FORMS += \

@@ -124,7 +124,7 @@ void MainWindow::on_bt_planificacion_clicked()
         return;
     }
 
-    Dialog_plan cuadro(nullptr, demanda_anual, tamano_lote);
+    Dialog_plan cuadro(nullptr, demanda_anual, tamano_lote, cEmision, cPosesion);
     cuadro.exec();
 
 
