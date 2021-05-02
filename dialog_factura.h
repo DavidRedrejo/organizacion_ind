@@ -15,7 +15,7 @@ class Dialog_factura : public QDialog
 public:
     explicit Dialog_factura(QWidget *parent = nullptr);
     ~Dialog_factura();
-    void set(Cliente);
+    void set(Cliente, float);
 
 private slots:
     void on_bt_tramit_clicked();
@@ -23,7 +23,7 @@ private slots:
 private:
     Ui::Dialog_factura *ui;
     Cliente cli;
-    //Factura fact;
+    float coste;
 };
 
 #endif // DIALOG_FACTURA_H

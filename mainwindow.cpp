@@ -148,6 +148,6 @@ void MainWindow::on_bt_mostrar_fact_clicked()
     _cliente.setDNI(DNI.toInt());
 
     Dialog_factura cuadro_fact;
-    cuadro_fact.set(_cliente);
+    cuadro_fact.set(_cliente, coste_total);
     cuadro_fact.exec();
 }

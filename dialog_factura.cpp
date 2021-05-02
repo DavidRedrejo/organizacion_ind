@@ -15,25 +15,28 @@ Dialog_factura::~Dialog_factura()
     delete ui;
 }
 
-void Dialog_factura::set(Cliente _cliente){
+void Dialog_factura::set(Cliente _cliente, float coste_total){
     cli = _cliente;
+    coste = coste_total;
     ui->nombre->setText(QString::fromStdString(cli.getnombre()));
     ui->apell->setText(QString::fromStdString(cli.getapellido()));
     ui->DNI->setText(QString::number(cli.getDNI()));
+    ui->coste->setText(QString::number(coste_total));
 }
 
 
 void Dialog_factura::on_bt_tramit_clicked()
 {
     QDate fecha = ui->calendarWidget->selectedDate();
-    QString descripcion = ui->descrip->text();
+    QString descripcion = ui->descripcion->toPlainText();
     QString direccion = ui->direcc->text();
 
     if(descripcion == "" || direccion == ""){
         QMessageBox::information(this, "Error", "Rellene todos los campos antes de tramitar.");
     }
     else{
-        Factura fact(cli, descripcion.toStdString(), fecha);
+        Factura fact(cli, descripcion.toStdString(), fecha, coste);
+        fact.mostrar();
         QMessageBox::information(this, "Información", "Pedido listo para enviar.");
     }
 }

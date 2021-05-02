@@ -32,9 +32,7 @@ int Cliente::getDNI(){
     return DNI;
 }
 
-
 item::item(string _descripcion, QDate _fecha){
-
     Descripcion=_descripcion;
     fecha=_fecha;
 }
@@ -55,20 +53,31 @@ QDate item::getfecha(){
     return fecha;
 }
 
-Factura::Factura(Cliente _titular, string descp, QDate fecha){
+Factura::Factura(Cliente _titular, string descp, QDate fecha, float _precio){
     titular = _titular;
     cosa = new item(descp, fecha);
+    precio = _precio;
 }
 
 void Factura::mostrar(){
+    cout<<"\nDatos de facturacion:"<<endl;
     cout<<"Nombre: "<<titular.getnombre()<<endl;
     cout<<"Apellidos: "<<titular.getapellido()<<endl;
     cout<<"DNI: "<<titular.getDNI()<<endl;
-/*
-    cout<<cosa->Descripcion<<"\n"<<cosa->fecha<<endl;
-    cosa->setdescripcion("Hola");
-    cosa->setfecha(90);
-    cout<<cosa->Descripcion<<"\n"<<cosa->fecha<<endl;
-    */
+    cout<<"Descripcion: "<<cosa->Descripcion<<endl;
+    cout<<"Fecha: "<<cosa->fecha.toString().toStdString()<<endl;
+    cout<<"Coste total: "<<precio<<" euros."<<endl;
 }
 
+
+void Sucursal::setFactura(Factura fact){
+    pedido = fact;
+}
+
+void Sucursal::setdireccion(string dic){
+    direccion = dic;
+}
+
+string Sucursal::getdirrecion(){
+    return direccion;
+}

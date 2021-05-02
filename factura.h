@@ -7,7 +7,6 @@
 #include <string>
 #include <QDate>
 
-
 using namespace std;
 
 class Cliente{
@@ -41,8 +40,9 @@ class Factura{
    private:
        Cliente titular;
        item *cosa;
+       float precio;
    public:
-       Factura(Cliente, string, QDate);
+       Factura(Cliente, string, QDate, float);
        void mostrar();
 };
 
@@ -51,8 +51,8 @@ class Sucursal{
        string direccion;
        Factura pedido;
    public:
-       //Sucursal();
-       void setdirrecion(string);
+       void setFactura(Factura);
+       void setdireccion(string);
        string getdirrecion();
 };
 
