@@ -7,6 +7,7 @@
 #include <string>
 #include <QDate>
 
+
 using namespace std;
 
 class Cliente{

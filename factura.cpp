@@ -32,7 +32,9 @@ int Cliente::getDNI(){
     return DNI;
 }
 
+
 item::item(string _descripcion, QDate _fecha){
+
     Descripcion=_descripcion;
     fecha=_fecha;
 }
@@ -69,3 +71,4 @@ void Factura::mostrar(){
     cout<<cosa->Descripcion<<"\n"<<cosa->fecha<<endl;
     */
 }
+
