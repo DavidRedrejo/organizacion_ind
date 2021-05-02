@@ -23,6 +23,10 @@
       <height>291</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Selecciona uno de los métodos de dimensionado.
+Rellena los campos indicados en la pestaña correspondiente.</string>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -421,6 +425,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Calcular el tamaño de lote según el método seleccionado en la pestaña.</string>
+    </property>
     <property name="text">
      <string>Calcular
 Tamaño Lote</string>
@@ -464,6 +471,10 @@ Tamaño Lote</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Abre la ventana que muestra la planificación y calcula el coste total.
+Es necesario calcular el tamaño de lote previamente.</string>
+    </property>
     <property name="text">
      <string>Planificación y Coste Total</string>
     </property>
@@ -485,7 +496,7 @@ Tamaño Lote</string>
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>260</y>
+      <y>270</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -498,7 +509,7 @@ Tamaño Lote</string>
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>290</y>
+      <y>300</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -511,7 +522,7 @@ Tamaño Lote</string>
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>320</y>
+      <y>330</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -524,10 +535,13 @@ Tamaño Lote</string>
     <property name="geometry">
      <rect>
       <x>510</x>
-      <y>280</y>
+      <y>290</y>
       <width>91</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Abre la ventana que muestra los datos de facturación.</string>
     </property>
     <property name="text">
      <string>Mostrar
@@ -584,6 +598,24 @@ Factura</string>
     </property>
     <property name="text">
      <string>€</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>240</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Información del cliente:</string>
     </property>
    </widget>
   </widget>

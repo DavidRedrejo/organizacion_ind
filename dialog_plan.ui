@@ -703,6 +703,9 @@ border-color: rgb(255, 0, 0);</string>
         <pointsize>9</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>Previsión de la demanda que se tendrá</string>
+      </property>
       <property name="text">
        <string>Necesidades Brutas</string>
       </property>
@@ -718,6 +721,9 @@ border-color: rgb(255, 0, 0);</string>
         <pointsize>9</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>Unidades disponibles para su uso</string>
+      </property>
       <property name="text">
        <string>Disponibilidades</string>
       </property>
@@ -732,6 +738,9 @@ border-color: rgb(255, 0, 0);</string>
        <font>
         <pointsize>9</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>Pedidos que están planificados para ser recibidos en el periodo que se indique</string>
       </property>
       <property name="text">
        <string>Recepciones
@@ -749,6 +758,9 @@ Programadas</string>
         <pointsize>9</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>Unidades necesarias para cubrir la demanda</string>
+      </property>
       <property name="text">
        <string>Necesidades Netas</string>
       </property>
@@ -763,6 +775,9 @@ Programadas</string>
        <font>
         <pointsize>9</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>Cantidad que se tiene que pedir para cubrir las necesidades</string>
       </property>
       <property name="text">
        <string>Recepción de Pedidos</string>
@@ -926,6 +941,9 @@ calculado antes:</string>
      <pointsize>9</pointsize>
     </font>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tamaño de lote que se calculó anteriormente&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(204, 206, 226);</string>
    </property>
@@ -949,6 +967,9 @@ calculado antes:</string>
     <font>
      <pointsize>9</pointsize>
     </font>
+   </property>
+   <property name="toolTip">
+    <string>Calcula la planificación y el coste total</string>
    </property>
    <property name="text">
     <string>Calcular
@@ -979,7 +1000,7 @@ Planificación</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>240</y>
+     <y>250</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -988,6 +1009,9 @@ Planificación</string>
     <font>
      <pointsize>9</pointsize>
     </font>
+   </property>
+   <property name="toolTip">
+    <string>Coste total (€)</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(204, 206, 226);</string>
@@ -1003,7 +1027,7 @@ Planificación</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>200</y>
+     <y>210</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -1015,6 +1039,52 @@ Planificación</string>
    </property>
    <property name="text">
     <string>Coste Total:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>280</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>^</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>280</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>|</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
