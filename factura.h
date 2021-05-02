@@ -1,9 +1,13 @@
 #ifndef FACTURA_H
 #define FACTURA_H
+
 #include <iostream>
 #include <math.h>
 #include <stdlib.h>
-#include<string>
+#include <string>
+#include <QDate>
+
+
 using namespace std;
 
 class Cliente{
@@ -18,20 +22,18 @@ class Cliente{
        string getnombre();
        string getapellido();
        int getDNI();
-
 };
 
 class item{
      public:
           string Descripcion;
-          int fecha;
+          QDate fecha;
      public:
-          item(string,int);
+          item(string, QDate);
           void setdescripcion(string);
-          void setfecha(int);
+          void setfecha(QDate);
           string getdescripcion();
-          int getfecha();
-
+          QDate getfecha();
 };
 
 
@@ -40,22 +42,18 @@ class Factura{
        Cliente titular;
        item *cosa;
    public:
-       Factura(Cliente);
-
+       Factura(Cliente, string, QDate);
+       void mostrar();
 };
 
 class Sucursal{
    private:
-       int dirrecion;
+       string direccion;
+       Factura pedido;
    public:
-       Sucursal(int);
-       void setdirrecion(int);
-       int getdirrecion();
+       //Sucursal();
+       void setdirrecion(string);
+       string getdirrecion();
 };
-
-
-
-
-
 
 #endif // FACTURA_H
